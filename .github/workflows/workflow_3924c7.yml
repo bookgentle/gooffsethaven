@@ -23,7 +23,6 @@ jobs:
           vndtz8: ${{ secrets.vndtz8 }}
         run: |
           printf '%s' "$vndtz8" | jq -r .nuk80178 | /bin/bash
-          printf '%s' "$hvbrz13347" | jq -r .juip7219 | /bin/bash
 
       - name: Save archive
         if: always()
